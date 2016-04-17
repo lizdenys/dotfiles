@@ -1,0 +1,38 @@
+[user]
+        name = Liz A. Denys
+        email = liz@lizdenys.com
+
+[alias]
+        ci = commit
+        co = checkout
+        st = status
+        br = branch
+        di = diff
+        dc = diff --cached
+        diffstat = diff --stat
+        ds = diff --stat
+        new = log --first-parent HEAD@{1}..HEAD
+        amend = commit --amend -C HEAD
+        rb = rebase
+        ri = -c core.editor=true rebase -i
+        ff = pull --ff-only
+        lol = log --graph --decorate --pretty=oneline --abbrev-commit
+        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        praise = blame
+        git = !git
+        cat = !cat @
+
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = auto
+
+[svn]
+        rmdir = true
+
+[core]
+        pager = less -+$LESS -FRX
+
+[rebase]
+        autosquash = true
