@@ -1,0 +1,13 @@
+# http://www.kilobitspersecond.com/2014/02/10/understanding-gnu-screens-hardstatus-strings/
+shelltitle '$ |sh'
+caption always '%{= kw}[ %{= ky}%H%{= kw} ][%= %{= g} %{= w}%-Lw%{+b M}%n%f* %t%{-}%+LW %= %{= kw}][ %{r}%l%{w} ]%{w}[%{c} %c %{w}]%{w}'
+
+startup_message off
+defscrollback 10000
+defutf8 on
+defflow off
+
+vbell on
+vbell_msg "derrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrp."
+
+escape ^Zz
