@@ -90,7 +90,7 @@ export LESS="--ignore-case --line-numbers"
 export GREP_OPTIONS="--color=auto --exclude-dir=.svn --exclude-dir=.bzr --exclude-dir=.git --exclude-dir=.pc"
 export MALLOC_OPTIONS="J" # for freebsd
 
-# srcfind for various languages
+# search through source for various languages
 srcfind () {
   grep -n -r --include=*.{c,cc,h,S,py,R,r} "$@" .
 }
