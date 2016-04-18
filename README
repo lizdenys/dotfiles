@@ -1,1 +1,3 @@
 Liz Denys's dotfiles, provided without warranty!
+
+I use bash, emacs, screen, and git extensively. bin/ may or may not really belong in this repo, but is full of scripts that I automatically stash on new machines during the same process as my dotfiles. I may or may not move this to a separate repo in the future.
