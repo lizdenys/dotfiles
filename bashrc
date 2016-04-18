@@ -100,6 +100,11 @@ unmv () {
   mv "$2" "$1"
 }
 
+# diff in opposite order
+revdiff () {
+  diff "$2" "$1"
+}
+
 # dynamic titles for screen
 case $TERM in
   screen*) export PROMPT_COMMAND='echo -n -e "\033k\033\\"'
