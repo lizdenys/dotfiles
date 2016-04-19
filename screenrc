@@ -1,6 +1,34 @@
-# http://www.kilobitspersecond.com/2014/02/10/understanding-gnu-screens-hardstatus-strings/
+### pass commands to screen for describing windows
 shelltitle '$ |sh'
+
+### set caption
 caption always '%{= kw}[ %{y}%H%{w} ][%= %-Lw %{+b M}%n%f* %t%{-}%+LW%{w} %=][ %{r}%l%{w} ][ %{c}%c%{w}]'
+# %{= kw}   : clear all text attributes and set to text color to white and background to black
+# [         : simple text to mark sections
+# %{y}      : set text color to yellow
+# %H        : hostname of the system
+# %{w}      : set text color to white
+# ][        : simple text to mark sections
+# %=        : with the later %= in the caption, pad this section on the left so that the caption spans the entire line
+# %-Lw      : list windows before current window, the optional 'L' indicates that these windows show their flags
+# %{+b M}   : the current window section starts, set text color to bold magenta
+# %n        : current window number
+# %f        : flags of the current window
+# *         : simple text I use to mark the current window
+# %t        : current window title
+# %{-}      : remove this set, just the '-' character, from the current attributes
+# %+LW      : list windows after current window, the optional 'L' indicates that these windows show their flags
+# %{w}      : set text color to white
+# %=        : with the earlier %= in the caption, pad this section on the left so that the caption spans the entire line
+# ][        : simple text to mark sections
+# %{r}      : set text color to red
+# %l        : current load of the system
+# %{w}      : set text color to white
+# ][        : simple text to mark sections
+# %{c}      : set text color to cyan
+# %c        : 24-hour clock
+# %{w}      : set text color to white
+# ]         : simple text to mark sections
 
 startup_message off
 defscrollback 10000
