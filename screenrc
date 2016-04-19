@@ -2,7 +2,7 @@
 shelltitle '$ |sh'
 
 ### set caption
-caption always '%{= kw}[ %{y}%H%{w} ][%= %-Lw %{+b M}%n%f* %t%{-}%+LW%{w} %=][ %{r}%l%{w} ][ %{c}%c%{w}]'
+caption always '%{= kw}[ %{y}%H%{w} ][%= %-Lw %{+b M}%n%f* %t%{-}%+LW%{w} %=][ %{r}%l%{w} ][ %{c}%c%{w} ]'
 # %{= kw}   : clear all text attributes and set to text color to white and background to black
 # [         : simple text to mark sections
 # %{y}      : set text color to yellow
