@@ -1,6 +1,6 @@
 # http://www.kilobitspersecond.com/2014/02/10/understanding-gnu-screens-hardstatus-strings/
 shelltitle '$ |sh'
-caption always '%{= kw}[ %{= ky}%H%{= kw} ][%= %{= g} %{= w}%-Lw%{+b M}%n%f* %t%{-}%+LW %= %{= kw}][ %{r}%l%{w} ]%{w}[%{c} %c %{w}]%{w}'
+caption always '%{= kw}[ %{y}%H%{w} ][%= %-Lw %{+b M}%n%f* %t%{-}%+LW%{w} %=][ %{r}%l%{w} ][ %{c}%c%{w}]'
 
 startup_message off
 defscrollback 10000
