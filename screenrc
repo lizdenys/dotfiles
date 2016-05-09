@@ -2,12 +2,12 @@
 shelltitle '$ |sh'
 
 ### set caption
-caption always '%{= kw}[ %{y}%H%{w} ][ %= %-Lw%{+b M}%n%f* %t%{-b w}%+LW %= ][ %{r}%l%{w} ][ %{c}%c%{w} ]'
+caption always '%{= kw}[ %{y}%H%{-} ][ %= %-Lw%{+b M}%n%f* %t%{-}%+LW %= ][ %{r}%l%{-} ][ %{c}%c%{-} ]'
 # %{= kw}   : clear all text attributes and set to text color to white and background to black
 # [         : plain text to mark sections
 # %{y}      : set text color to yellow
 # %H        : hostname of the system
-# %{w}      : set text color to white
+# %{-}      : go back to previous text settings (text color to white)
 # ][        : plain text to mark sections
 # %=        : with the later %= in the caption, pad this section on the left so that the caption spans the entire line
 # %-Lw      : list windows before current window, the optional 'L' indicates that these windows show their flags
@@ -16,17 +16,17 @@ caption always '%{= kw}[ %{y}%H%{w} ][ %= %-Lw%{+b M}%n%f* %t%{-b w}%+LW %= ][ %
 # %f        : flags of the current window
 # *         : plain text I use to mark the current window
 # %t        : current window title
-# %{-b w}   : make text normal weight again, set text color to white
+# %{-}      : go back to previous text settings (text color to white, normal weight)
 # %+LW      : list windows after current window, the optional 'L' indicates that these windows show their flags
 # %=        : with the earlier %= in the caption, pad this section on the left so that the caption spans the entire line
 # ][        : plain text to mark sections
 # %{r}      : set text color to red
 # %l        : current load of the system
-# %{w}      : set text color to white
+# %{-}      : go back to previous text settings (text color to white)
 # ][        : plain text to mark sections
 # %{c}      : set text color to cyan
 # %c        : 24-hour clock
-# %{w}      : set text color to white
+# %{-}      : go back to previous text settings (text color to white)
 # ]         : plain text to mark sections
 
 startup_message off
