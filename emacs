@@ -20,3 +20,10 @@
 (setq fill-column 80)
 (setq default-fill-column 80)
 (global-set-key "\C-xf" nil) ; no changing fill column too easily
+
+;; because sometimes I over M-q out of habit.
+(defun unfill-paragraph ()
+  (interactive)
+  (let ((fill-column (point-max)))
+    (fill-paragraph nil)))
+(define-key global-map "\M-Q" 'unfill-paragraph)
