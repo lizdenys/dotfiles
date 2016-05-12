@@ -23,7 +23,7 @@
 
 ;; because sometimes I over M-q out of habit.
 (defun unfill-paragraph ()
-  (interactive)
+  (interactive (progn (barf-if-buffer-read-only) '(t)))
   (let ((fill-column (point-max)))
     (fill-paragraph nil)))
 (define-key global-map "\M-Q" 'unfill-paragraph)
