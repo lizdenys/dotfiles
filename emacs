@@ -22,8 +22,8 @@
 (global-set-key "\C-xf" nil) ; no changing fill column too easily
 
 ;; because sometimes I over M-q out of habit.
-(defun unfill-paragraph ()
+(defun unfill-paragraph (&optional region)
   (interactive (progn (barf-if-buffer-read-only) '(t)))
   (let ((fill-column (point-max)))
-    (fill-paragraph nil)))
+    (fill-paragraph nil region)))
 (define-key global-map "\M-Q" 'unfill-paragraph)
