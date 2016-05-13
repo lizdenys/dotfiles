@@ -39,12 +39,12 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -92,22 +92,22 @@ export MALLOC_OPTIONS="J" # for freebsd
 
 # search through source for various languages
 srcfind () {
-  grep -n -r --include=*.{c,cc,h,S,py,R,r} "$@" .
+    grep -n -r --include=*.{c,cc,h,S,py,R,r} "$@" .
 }
 
 # horrible person way to half fix an unwanted mv!
 unmv () {
-  mv "$2" "$1"
+    mv "$2" "$1"
 }
 
 # diff in opposite order
 revdiff () {
-  diff "$2" "$1"
+    diff "$2" "$1"
 }
 
 # dynamic titles for screen
 case $TERM in
-  screen*) export PROMPT_COMMAND='echo -n -e "\033k\033\\"'
+    screen*) export PROMPT_COMMAND='echo -n -e "\033k\033\\"'
 esac
 
 # keep typos & convenience aliasing separate for, uh, cleanliness?
@@ -117,5 +117,5 @@ fi
 
 # allow for a local component
 if [ -f ~/.bashrc.mine ]; then
-   source ~/.bashrc.mine
+    source ~/.bashrc.mine
 fi

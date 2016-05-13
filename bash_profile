@@ -2,10 +2,10 @@
 
 # this might be redundant, but .bashrc should be idempotent ¯\_(ツ)_/¯
 if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
+    source ~/.bashrc
 fi
 
 # allow for a local component
 if [ -f ~/.bash_profile.mine ]; then
-   source ~/.bash_profile.mine
+    source ~/.bash_profile.mine
 fi

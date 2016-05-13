@@ -67,5 +67,5 @@ alias mplay='mplayer'
 
 # allow for a local component
 if [ -f ~/.bash_aliases.mine ]; then
-   source ~/.bash_aliases.mine
+    source ~/.bash_aliases.mine
 fi
