@@ -82,8 +82,20 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# safe path manipulation
+pathmunge () {
+    if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)" ; then
+        if [ "$2" = "after" ] ; then
+            PATH=$PATH:$1
+        else
+            PATH=$1:$PATH
+        fi
+    fi
+}
+pathmunge ~/bin after
+unset pathmunge
+
 # general convenience
-export PATH=$PATH:~/bin:
 export EDITOR="emacs"
 alias emacs='emacs -nw'
 export LESS="--ignore-case --line-numbers"
