@@ -109,7 +109,11 @@ srcfind () {
 
 # horrible person way to half fix an unwanted mv!
 unmv () {
-    mv "$2" "$1"
+    if [ $# -eq 2 ]; then
+        mv "$2" "$1"
+    else
+        echo "illegal number of arguments"
+    fi
 }
 
 # diff in opposite order
