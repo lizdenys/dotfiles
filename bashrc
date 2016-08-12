@@ -121,6 +121,11 @@ revdiff () {
     diff "$2" "$1"
 }
 
+# open read only
+ev() {
+    emacs "$1" --eval '(setq buffer-read-only t)'
+}
+
 # dynamic titles for screen
 case $TERM in
     screen*) export PROMPT_COMMAND='echo -n -e "\033k\033\\"'
