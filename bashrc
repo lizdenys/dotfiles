@@ -116,6 +116,15 @@ unmv () {
     fi
 }
 
+# I know what I'm doing is wrong.
+uncp () {
+    if [ $# -eq 2 ]; then
+        cp "$2" "$1"
+    else
+        echo "illegal number of arguments"
+    fi
+}
+
 # diff in opposite order
 revdiff () {
     diff "$2" "$1"
