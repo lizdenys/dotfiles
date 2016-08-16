@@ -27,3 +27,7 @@
   (let ((fill-column (point-max)))
     (fill-paragraph nil region)))
 (define-key global-map "\M-Q" 'unfill-paragraph)
+
+;; c/c++ indentation
+(setq-default c-basic-offset 4)
+(setq c-default-style "linux" c-basic-offset 4)
