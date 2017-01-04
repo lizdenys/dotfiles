@@ -21,6 +21,11 @@
 (setq default-fill-column 80)
 (global-set-key "\C-xf" nil) ; no changing fill column too easily
 
+;; tabs suck
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+
 ;; because sometimes I over M-q out of habit.
 (defun unfill-paragraph (&optional region)
   (interactive (progn (barf-if-buffer-read-only) '(t)))
