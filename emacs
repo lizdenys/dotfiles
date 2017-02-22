@@ -8,6 +8,9 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace) ; del trailing whitespace
 
+;; RET behaves like C-j in version 24.4 and higher, which is the worst.
+(electric-indent-mode -1)
+
 ;; distinguish files with the same name with <>
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
