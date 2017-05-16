@@ -98,7 +98,7 @@ unset pathmunge
 # general convenience
 export EDITOR="emacs"
 alias emacs='emacs -nw'
-export LESS="--ignore-case --line-numbers"
+export LESS="--ignore-case --line-numbers --chop-long-lines"
 export GREP_OPTIONS="--color=auto --exclude-dir=.svn --exclude-dir=.bzr --exclude-dir=.git --exclude-dir=.pc"
 export MALLOC_OPTIONS="J" # for freebsd
 
