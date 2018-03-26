@@ -99,7 +99,7 @@ unset pathmunge
 export EDITOR="emacs"
 alias emacs='emacs -nw'
 export LESS="--ignore-case --line-numbers"
-export GREP_OPTIONS="--color=auto --exclude-dir=.svn --exclude-dir=.bzr --exclude-dir=.git --exclude-dir=.pc"
+alias grep='grep --color=auto --exclude-dir=.svn --exclude-dir=.bzr --exclude-dir=.git --exclude-dir=.pc'
 #export MALLOC_OPTIONS="J" # for freebsd
 
 # search through source for various languages
