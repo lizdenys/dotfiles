@@ -99,8 +99,8 @@ unset pathmunge
 export EDITOR="emacs"
 alias emacs='emacs -nw'
 export LESS="--ignore-case --line-numbers"
-export GREP_OPTIONS="--color=auto --exclude-dir=.svn --exclude-dir=.bzr --exclude-dir=.git --exclude-dir=.pc"
-export MALLOC_OPTIONS="J" # for freebsd
+alias grep='grep --color=auto --exclude-dir=.svn --exclude-dir=.bzr --exclude-dir=.git --exclude-dir=.pc'
+#export MALLOC_OPTIONS="J" # for freebsd
 
 # search through source for various languages
 srcfind () {
@@ -116,9 +116,23 @@ unmv () {
     fi
 }
 
+# I know what I'm doing is wrong.
+uncp () {
+    if [ $# -eq 2 ]; then
+        cp "$2" "$1"
+    else
+        echo "illegal number of arguments"
+    fi
+}
+
 # diff in opposite order
 revdiff () {
     diff "$2" "$1"
+}
+
+# open read only
+ev() {
+    emacs "$1" --eval '(setq buffer-read-only t)'
 }
 
 # dynamic titles for screen

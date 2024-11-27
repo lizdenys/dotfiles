@@ -22,6 +22,7 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias xs='cd'
 alias vf='cd'
+alias scd='cd'
 
 alias temacs='emacs'
 alias e='emacs'
