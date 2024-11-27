@@ -1,0 +1,2 @@
+alias prioritizetimemachine='sudo sysctl debug.lowpri_throttle_enabled=0'
+alias deprioritizetimemachine='sudo sysctl debug.lowpri_throttle_enabled=1'
